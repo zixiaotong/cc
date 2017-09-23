@@ -16,10 +16,10 @@
     <meta name="author" content="">
 
     <title>上线工具</title>
-    <link href="../views/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="../views/vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
-    <link href="../views/dist/css/sb-admin-2.css" rel="stylesheet">
-    <link href="../views/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../vendor/metisMenu/metisMenu.min.css" rel="stylesheet">
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+    <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 
@@ -53,11 +53,11 @@
     </div>
 
 </div>
-<script src="../views/vendor/jquery/jquery.min.js"></script>
-<script src="../views/vendor/bootstrap/js/bootstrap.min.js"></script>
-<script src="../views/vendor/metisMenu/metisMenu.min.js"></script>
-<script src="../views/vendor/raphael/raphael.min.js"></script>
-<script src="../views/dist/js/sb-admin-2.js"></script>
+<script src="../vendor/jquery/jquery.min.js"></script>
+<script src="../vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="../vendor/metisMenu/metisMenu.min.js"></script>
+<script src="../vendor/raphael/raphael.min.js"></script>
+<script src="../dist/js/sb-admin-2.js"></script>
 
 </body>
 </html>

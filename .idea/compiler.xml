@@ -7,11 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="cc-service" />
+        <module name="cc-test" />
         <module name="cc-web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="cc-service" target="1.8" />
+      <module name="cc-test" target="1.8" />
       <module name="cc-web" target="1.8" />
       <module name="practice" target="1.8" />
     </bytecodeTargetLevel>

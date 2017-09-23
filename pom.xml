@@ -11,6 +11,7 @@
     <modules>
         <module>cc-web</module>
         <module>cc-service</module>
+        <module>cc-test</module>
     </modules>
 
     <url>http://maven.apache.org</url>
