@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="cc-web:war">
+    <output-path>$PROJECT_DIR$/cc-web/target</output-path>
+    <root id="archive" name="cc-web.war">
+      <element id="artifact" artifact-name="cc-web:war exploded" />
+    </root>
+  </artifact>
+</component>

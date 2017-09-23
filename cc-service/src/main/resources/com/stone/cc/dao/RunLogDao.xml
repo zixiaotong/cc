@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.stone.cc.dao.RunLogDao">
+
+    <resultMap id="runLogMap" type="com.stone.cc.beans.RunLog">
+        <id property="id" column="id"></id>
+        <result property="createdate" column="createdate"></result>
+        <result property="app" column="app"></result>
+        <result property="serverip" column="serverip"></result>
+        <result property="log" column="log" ></result>
+        <result property="deployid" column="deployid" ></result>
+    </resultMap>
+
+    <select id="selectRunlogById" parameterType="String" resultMap="runLogMap">
+        select * from runlog where deployid=#{deployid}
+    </select>
+
+</mapper>
