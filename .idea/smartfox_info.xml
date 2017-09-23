@@ -60,5 +60,6 @@
         <option value="MapOrSetKeyShouldOverrideHashCodeEquals" />
       </set>
     </option>
+    <option name="projectInspectionClosed" value="true" />
   </component>
 </project>

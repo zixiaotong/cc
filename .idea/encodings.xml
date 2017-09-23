@@ -4,6 +4,12 @@
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/cn" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/com" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/httpclient" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/jdk8" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/mode" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/test/test.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-web" charset="UTF-8" />
   </component>
 </project>
