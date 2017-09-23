@@ -216,7 +216,7 @@
                 <dubbox.version>1.0.0</dubbox.version>
                 <war.skipjspath></war.skipjspath>
                 <log4j.level>DEBUG</log4j.level>
-                <disconf.conf_server_host>disconf.zhtxw.cn</disconf.conf_server_host>
+                <disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>
                 <disconf.version>1_0_0_0</disconf.version>
                 <disconf.env>local</disconf.env>
                 <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
@@ -234,7 +234,7 @@
                 <dubbox.version>1.0.0</dubbox.version>
                 <war.skipjspath></war.skipjspath>
                 <log4j.level>DEBUG</log4j.level>
-                <disconf.conf_server_host>disconf.zhtxw.cn</disconf.conf_server_host>
+                <disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>
                 <disconf.version>1_0_0_0</disconf.version>
                 <disconf.env>qa</disconf.env>
                 <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
@@ -249,7 +249,7 @@
                 <dubbox.version>1.0.0</dubbox.version>
                 <war.skipjspath></war.skipjspath>
                 <log4j.level>DEBUG</log4j.level>
-                <disconf.conf_server_host>disconf.zhtxw.cn</disconf.conf_server_host>
+                <disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>
                 <disconf.version>1_0_0_0</disconf.version>
                 <disconf.env>qa2</disconf.env>
                 <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
@@ -264,7 +264,7 @@
                 <dubbox.version>1.0.0</dubbox.version>
                 <war.skipjspath></war.skipjspath>
                 <log4j.level>DEBUG</log4j.level>
-                <disconf.conf_server_host>disconf.zhtxw.cn</disconf.conf_server_host>
+                <disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>
                 <disconf.version>1_0_0_0</disconf.version>
                 <disconf.env>yuncom</disconf.env>
                 <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
