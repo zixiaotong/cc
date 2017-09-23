@@ -34,7 +34,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html">上线工具</a>
+            <a class="navbar-brand" href="index.jsp">上线工具</a>
         </div>
         <div>
             <ul class="nav navbar-top-links navbar-right">
