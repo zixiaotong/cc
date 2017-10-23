@@ -108,14 +108,14 @@ public class test {
     //@Test
     //public void test5(){
     //
-    //    List<String> list1 = new ArrayList<>();
+    //    listdemo<String> list1 = new ArrayList<>();
     //    list1.add("1");
     //    list1.add("2");
     //    list1.add("3");
     //    list1.add("4");
     //    list1.add("5");
     //
-    //    Map<String, List> segmentMap = Maps.newConcurrentMap();
+    //    Map<String, listdemo> segmentMap = Maps.newConcurrentMap();
     //    segmentMap.put("1",list1);
     //
     //    segmentMap.put("1",segmentMap.get("1").subList(0,3));

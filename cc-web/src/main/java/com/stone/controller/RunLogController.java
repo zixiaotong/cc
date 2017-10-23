@@ -22,11 +22,11 @@ public class RunLogController {
     @Autowired
     private IRunLogService IRunLogService;
 
-    @RequestMapping("/list")
+    @RequestMapping("/listdemo")
     public ModelAndView tologin() throws Exception {
-        ModelAndView mv = new ModelAndView("list");
+        ModelAndView mv = new ModelAndView("listdemo");
         mv.addObject("title", "机器列表页面");
-        mv.addObject("viewPath", "list");
+        mv.addObject("viewPath", "listdemo");
         return mv;
 
     }

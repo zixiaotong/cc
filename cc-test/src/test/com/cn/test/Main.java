@@ -2,7 +2,7 @@ package com.cn.test;//package com.online.cn.test;
 //
 //import java.util.ArrayList;
 //import java.util.HashMap;
-//import java.util.List;
+//import java.util.listdemo;
 //import java.util.Map;
 //
 //public class Main {
@@ -10,7 +10,7 @@ package com.cn.test;//package com.online.cn.test;
 //    public static void main(String[] args) {
 //
 //        //for (int i =0; i < 10; i = i + 2) {
-//        //    List<Integer> list1 = new ArrayList<>();
+//        //    listdemo<Integer> list1 = new ArrayList<>();
 //        //    list1.add(i);
 //        //    if (i + 1 < 10) {
 //        //        list1.add(i + 1);
@@ -18,36 +18,36 @@ package com.cn.test;//package com.online.cn.test;
 //        //    System.out.println(list1.toString());
 //        //}
 //
-//        List<List<String>> list = new ArrayList<>();
+//        listdemo<listdemo<String>> listdemo = new ArrayList<>();
 //
-//        List<String> list11 = new ArrayList<>();
+//        listdemo<String> list11 = new ArrayList<>();
 //        list11.add("a");
-//        List<String> list12 = new ArrayList<>();
+//        listdemo<String> list12 = new ArrayList<>();
 //        list12.add("b");
-//        List<String> list13 = new ArrayList<>();
+//        listdemo<String> list13 = new ArrayList<>();
 //        list13.add("c");
 //
-//        list.add(list11);
-//        list.add(list12);
-//        list.add(list13);
+//        listdemo.add(list11);
+//        listdemo.add(list12);
+//        listdemo.add(list13);
 //
-//        List<List<String>> list2 = new ArrayList<>();
-//        List<String> list22 = new ArrayList<>();
+//        listdemo<listdemo<String>> list2 = new ArrayList<>();
+//        listdemo<String> list22 = new ArrayList<>();
 //        list22.add("1");
-//        List<String> list23 = new ArrayList<>();
+//        listdemo<String> list23 = new ArrayList<>();
 //        list23.add("2");
-//        List<String> list24 = new ArrayList<>();
+//        listdemo<String> list24 = new ArrayList<>();
 //        list24.add("3");
 //        list2.add(list22);
 //        list2.add(list23);
 //        list2.add(list24);
 //
-//        for (int i = 0; i < list.size(); i++) {
+//        for (int i = 0; i < listdemo.size(); i++) {
 //            for (int j = 0; j < list2.size(); j++) {
 //
-//                for (int k = 0; k < list.get(i).size(); k++) {
+//                for (int k = 0; k < listdemo.get(i).size(); k++) {
 //                    for (int l = 0; l < list2.get(j).size(); l++) {
-//                        System.out.println(list.get(i).get(k) + "---" + list2.get(j).get(l));
+//                        System.out.println(listdemo.get(i).get(k) + "---" + list2.get(j).get(l));
 //                    }
 //                }
 //            }
@@ -55,11 +55,11 @@ package com.cn.test;//package com.online.cn.test;
 //
 //        //
 //        //
-//        //for(int i = 0; i <=list.size(); i = i + 2){
-//        //    List<String> list1 = new ArrayList<>();
-//        //    list1.add(list.get(i));
-//        //    if (i + 1 < list.size()) {
-//        //        list1.add(list.get(i+1));
+//        //for(int i = 0; i <=listdemo.size(); i = i + 2){
+//        //    listdemo<String> list1 = new ArrayList<>();
+//        //    list1.add(listdemo.get(i));
+//        //    if (i + 1 < listdemo.size()) {
+//        //        list1.add(listdemo.get(i+1));
 //        //    }
 //        //    System.out.println(list1.toString());
 //        //}
