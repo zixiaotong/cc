@@ -8,9 +8,9 @@
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/jdk8" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/online" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/testenum/RefundStatusEnum.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/threadticket" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/threadticket/Ticket.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/threadticket/TicketDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/Ticket.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/TicketDemo.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/resources/test.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/test/com" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/test/com/mode" charset="GBK" />

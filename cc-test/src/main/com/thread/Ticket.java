@@ -1,4 +1,4 @@
-package com.threadticket;
+package com.thread;
 
 public class Ticket implements Runnable {
 
