@@ -21,11 +21,14 @@ public class listTest {
             user.setName(i + "zhanghe");
             userList.add(user);
         }
+        System.out.println(userList.size());
         for (int i = 1; i < userList.size(); i++) {
             if (userList.get(i).getName().equals("2zhanghe")) {
                 userList.remove(i);
+                i--;
             }
         }
+        System.out.println(userList.size());
         for (User user : userList) {
             System.out.println(user.toString());
         }
@@ -37,4 +40,5 @@ public class listTest {
 
         System.out.println(ss.toString());
     }
+
 }

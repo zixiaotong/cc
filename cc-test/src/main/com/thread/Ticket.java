@@ -8,7 +8,6 @@ public class Ticket implements Runnable {
     @Override
     public void run() {
         while (true) {
-
             synchronized (obj) {
                 if (ticket > 0) {
                     try {
@@ -17,7 +16,9 @@ public class Ticket implements Runnable {
                         e.printStackTrace();
                     }
                     System.out.println(Thread.currentThread().getName()
-                        + "���ڳ��۵�" + (ticket--) + "��Ʊ");
+                        + "payint " + (ticket--));
+                } else {
+                    return;
                 }
             }
         }

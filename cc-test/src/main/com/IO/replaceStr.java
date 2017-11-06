@@ -18,7 +18,6 @@ public class replaceStr {
 
     @Test
     public void test1() throws IOException {
-
         File file = new File("/Users/shanglei/Downloads/zhanghetianxia/floor/");
         File[] files = file.listFiles();
         for (File file2 : files) {
@@ -26,8 +25,10 @@ public class replaceStr {
             String str = readFile(file2.getAbsolutePath());
             // 替换文件内容
             String repStr = replace(str);
+            //替换空格
+            String repStr2 = replace2(repStr);
             // 写入文件
-            wirteFile(file2.getName(), repStr);
+            wirteFile(file2.getName(), repStr2);
         }
     }
 
@@ -46,9 +47,17 @@ public class replaceStr {
         osw.close();
     }
 
+    private static String replace2(String result) {
+        if (result.indexOf("  ") >= 0) {
+            return replace(result.replace("  ", " "));
+        } else {
+            return result;
+        }
+    }
+
     private static String replace(String result) {
-        if (result.indexOf("test") >= 0) {
-            return replace(result.replace("test", ""));
+        if (result.indexOf("zhangheyun.cn") >= 0) {
+            return replace(result.replace("zhangheyun.cn", "zhtxw.cn"));
         } else {
             return result;
         }
