@@ -49,6 +49,7 @@
           <element id="library" level="project" name="Maven: org.springframework:spring-aop:4.1.4.RELEASE" />
           <element id="library" level="project" name="Maven: aopalliance:aopalliance:1.0" />
           <element id="library" level="project" name="Maven: org.springframework:spring-messaging:4.1.4.RELEASE" />
+          <element id="library" level="project" name="Maven: org.projectlombok:lombok:1.16.8" />
         </element>
       </element>
       <element id="directory" name="META-INF">

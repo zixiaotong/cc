@@ -11,6 +11,9 @@
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/Ticket.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/TicketDemo.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/timertask/Test1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/timertask/TimerTask1.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/wenhu/Task.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/resources/test.properties" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/test/com" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/test/com/mode" charset="GBK" />

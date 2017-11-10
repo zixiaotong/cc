@@ -55,7 +55,7 @@ public class SendPost {
             // result += line;
             // }
             //result = conn.getResponseCode();
-            //System.out.println("state:" + state);
+            // System.out.println("state:" + state);
             in = conn.getInputStream();
             result = StreamUtils.copyToString(in, Charset.forName("utf-8"));
         }
