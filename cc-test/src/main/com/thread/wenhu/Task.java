@@ -53,7 +53,7 @@ public class Task {
     /**
      * 数据容器
      */
-    private static BlockingQueue<OrderTest> queue = new LinkedBlockingQueue<OrderTest>();
+    private static BlockingQueue<OrderTest> queue = new LinkedBlockingQueue<>();
 
     private class ThreadMainClass implements Runnable {
         public void run() {
@@ -94,6 +94,7 @@ public class Task {
      */
     private class ThreadClass implements Runnable {
 
+        @Override
         public void run() {
             // 获取数据
             while (true) {
@@ -103,7 +104,7 @@ public class Task {
                         continue;
                     }
 
-                    //					System.out.println("开始抓取数据-------------------------------");
+                    System.out.println("开始抓取数据-------------------------------");
                     // 新建查询计数器
                     selectCount = new CountDownLatch(1);
                     // 抓取数据

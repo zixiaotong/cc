@@ -29,20 +29,20 @@ public class stringtest {
     public void test2() {
         /**
          /usr/local/nginx/conf/nginx.conf
-         /usr/local/nginx/conf/nginx_com_cn.conf
-         /usr/local/nginx/conf/nginx_ccoop.conf
+         /usr/local/nginx/conf/webtest/nginx_com_cn.conf
          ªÒ»°  nginx.conf
          */
-        String s = "/usr/local/nginx/conf/nginx_ccoop.conf";
+        String s = "/usr/local/nginx/conf/webtest/nginx_ccoop.conf";
         String[] name = s.split("/");
+        System.out.println(name[name.length-1]);
         //System.out.println(arr[0]);
         //System.out.println(arr[1]);
         //System.out.println(arr[2]);
         //System.out.println(arr[3]);
         //System.out.println(arr[4]);
         //System.out.println(arr[5]);
-        String pathback = name[0]+"/"+name[1]+"/"+name[2]+"/"+name[3]+"/"+name[4]+"/toolsback/";
-        System.out.println(pathback);
+        //String pathback = name[0]+"/"+name[1]+"/"+name[2]+"/"+name[3]+"/"+name[4]+"/toolsback/";
+        //System.out.println(pathback);
     }
     public static String ToDateString(Date o, String strFormat) {
         if(o == null) {
