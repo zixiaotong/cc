@@ -50,36 +50,31 @@ public class hdfsUtils {
      */
     @Test
     public void testMkdir() throws IOException {
-
         fs.mkdirs(new Path("/a/b/c"));
     }
 
-    @Test
     /**
      * 查看目录信息
      */
+    @Test
     public void listFileInfo() throws IOException {
         RemoteIterator<LocatedFileStatus> remoteIterator = fs.listFiles(new Path("/"), true);
         while (remoteIterator.hasNext()) {
             LocatedFileStatus info = remoteIterator.next();
             System.out.println(info.getPath().getName());
         }
-
         System.out.println("--------------------");
-
         FileStatus[] fileStatuses = fs.listStatus(new Path("/"));
         for (FileStatus fileStatus : fileStatuses) {
-
             String str = fileStatus.isDirectory() ? "d--" : "f--";
-
             System.out.println(str + "---" + fileStatus.getPath().getName());
         }
     }
 
-    @Test
     /**
      * 修改文件名
      */
+    @Test
     public void removeName() throws IOException {
         fs.rename(new Path("/nginx_164.tar.gz"), new Path("/nginx164.tar.gz"));
     }
