@@ -7,6 +7,6 @@ package com.bigdata.rpc;
 public class UserLoginImpl implements IUserLogin {
     @Override
     public String login(String name, String password) {
-        return name + "登陆了";
+        return name + "success";
     }
 }
