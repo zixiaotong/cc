@@ -18,7 +18,7 @@ public class PublishService {
     public static void main(String[] args) throws IOException {
         Builder builder = new RPC.Builder(new Configuration());
         builder.setBindAddress("master").setPort(10041).setProtocol(IUserLogin.class).
-                setInstance(new UserLoginImpl());
+            setInstance(new UserLoginImpl());
         Server server = builder.build();
         server.start();
     }
