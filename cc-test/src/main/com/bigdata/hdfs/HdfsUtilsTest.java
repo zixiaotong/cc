@@ -16,7 +16,7 @@ import org.junit.Test;
  * @author shanglei
  * @date 2017/11/19.
  */
-public class hdfsUtils {
+public class HdfsUtilsTest {
 
     FileSystem fs;
 
