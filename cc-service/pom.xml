@@ -9,11 +9,10 @@
         <version>1.0.0</version>
     </parent>
 
-
     <artifactId>cc-service</artifactId>
     <name>cc-service</name>
     <packaging>jar</packaging>
-
+    <version>1.0.0</version>
 
     <build>
         <finalName>cc-service</finalName>
@@ -29,11 +28,8 @@
         </plugins>
     </build>
 
-
     <!--版本依赖-->
     <dependencies>
-
     </dependencies>
-
 
 </project>
