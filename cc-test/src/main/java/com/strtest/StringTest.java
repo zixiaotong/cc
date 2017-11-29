@@ -24,5 +24,12 @@ public class StringTest {
         int x4 = x % 10;
         System.out.println(x1 + ";" + x2 + ";" + x3 + ";" + x4);
     }
+
+    @Test
+    public void test3() {
+       String str  = "yuwen";
+        System.out.println(str.hashCode());
+        System.out.println(str.hashCode());
+    }
 }
 

@@ -55,6 +55,6 @@ http://www.springframework.org/schema/mvc/spring-mvc-3.0.xsd">
     <mvc:resources location="/views/less/" mapping="/views/less/**"></mvc:resources>
     <mvc:resources location="/views/vendor/" mapping="/views/vendor/**"></mvc:resources>
 
-    <mvc:annotation-driven />
+    <mvc:annotation-driven/>
 
 </beans>

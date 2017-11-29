@@ -2,7 +2,6 @@ package com.stone.controller;
 
 import java.util.List;
 
-import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
 
 import com.stone.cc.beans.RunLog;

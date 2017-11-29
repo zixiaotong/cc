@@ -2,7 +2,6 @@ package com.stone.cc.service.impl;
 
 import java.util.List;
 
-
 import com.stone.cc.beans.RunLog;
 import com.stone.cc.dao.RunLogDao;
 import com.stone.cc.service.IRunLogService;
