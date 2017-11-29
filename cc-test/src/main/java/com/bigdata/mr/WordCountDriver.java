@@ -3,10 +3,10 @@ package com.bigdata.mr;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
 import org.apache.hadoop.io.LongWritable;
+import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Job;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
-import org.junit.Test;
 
 /**
  * @author shanglei
@@ -23,15 +23,15 @@ public class WordCountDriver {
         wcjob.setMapperClass(WordCountMapper.class);
         wcjob.setReducerClass(WordCountReducer.class);
 
-        wcjob.setMapOutputKeyClass(Test.class);
+        wcjob.setMapOutputKeyClass(Text.class);
         wcjob.setMapOutputValueClass(LongWritable.class);
 
-        wcjob.setOutputKeyClass(Test.class);
+        wcjob.setOutputKeyClass(Text.class);
         wcjob.setOutputValueClass(LongWritable.class);
 
-        FileInputFormat.setInputPaths(wcjob, new Path("/hello.txt"));
+        FileInputFormat.setInputPaths(wcjob, new Path("/wordcount/data/"));
 
-        FileOutputFormat.setOutputPath(wcjob, new Path("/wordcount/output"));
+        FileOutputFormat.setOutputPath(wcjob, new Path("/wordcount/output/"));
 
         wcjob.waitForCompletion(true);
     }
