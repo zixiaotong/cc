@@ -1,4 +1,4 @@
-package com.cn.mode.simple_mode;
+package com.mode.simple_mode;
 
 public class TeacherTest {
 	public static void main(String[] args) {

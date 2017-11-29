@@ -1,24 +1,24 @@
-package com.cn.mode.simple_mode;
+package com.mode.simple_mode;
 
 /*
- * µ¥ÀýÄ£Ê½£¨¶öººÊ½£©£º
+ * ï¿½ï¿½ï¿½ï¿½Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½
  *
- * 		ÀÁººÊ½£ºÓÃµÄÊ±ºò²ÅÔì¶ÔÏó¡£
- * 		¶öººÊ½£º½øÀ´¾ÍÔì¶ÔÏó¡£¿ª·¢ÖÐ³£ÓÃ¡£
+ * 		ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½Ãµï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+ * 		ï¿½ï¿½ï¿½ï¿½Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ó¡£¿ï¿½ï¿½ï¿½ï¿½Ð³ï¿½ï¿½Ã¡ï¿½
  */
 public class Student {
-	// ¹¹ÔìË½ÓÐ
-	// ²»ÈÃÍâ½ç´´½¨¶ÔÏó
+	// ï¿½ï¿½ï¿½ï¿½Ë½ï¿½ï¿½
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ç´´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	private Student() {
 	}
 
-	// ±¾ÉíÔìÒ»¸ö¶ÔÏó
-	// ¼Óprivate£¬ÊÇÎªÁË²»ÈÃÍâ½çÖ±½Ó·ÃÎÊ
-	// ¼Óstatic£¬ÊÇÒòÎª¾²Ì¬Ö»ÄÜ·ÃÎÊ¾²Ì¬
+	// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	// ï¿½ï¿½privateï¿½ï¿½ï¿½ï¿½Îªï¿½Ë²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó·ï¿½ï¿½ï¿½
+	// ï¿½ï¿½staticï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½Ì¬Ö»ï¿½Ü·ï¿½ï¿½Ê¾ï¿½Ì¬
 	private static Student s = new Student();
 
-	// ¹«¹²µÄ·ÃÎÊ·½Ê½
-	// ÎªÁËÈÃÍâ½ç¿ÉÒÔÖ±½ÓÊ¹ÓÃ£¬ÓÃ¾²Ì¬ÐÞÊÎ
+	// ï¿½ï¿½ï¿½ï¿½ï¿½Ä·ï¿½ï¿½Ê·ï¿½Ê½
+	// Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö±ï¿½ï¿½Ê¹ï¿½Ã£ï¿½ï¿½Ã¾ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½
 	public static Student getStudent() {
 		return s;
 	}

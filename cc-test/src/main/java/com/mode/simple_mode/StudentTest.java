@@ -1,4 +1,4 @@
-package com.cn.mode.simple_mode;
+package com.mode.simple_mode;
 
 /**
  * @author shanglei
@@ -9,7 +9,7 @@ public class StudentTest {
 
 		// Student.s = null;
 
-		// ÑÝÊ¾
+		// ï¿½ï¿½Ê¾
 		Student s1 = Student.getStudent();
 		Student s2 = Student.getStudent();
 		System.out.println(s1 == s2);
