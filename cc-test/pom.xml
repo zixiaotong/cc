@@ -30,11 +30,6 @@
 
     <!--版本依赖-->
     <dependencies>
-        <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <version>1.16.8</version>
-        </dependency>
     </dependencies>
 
 </project>
