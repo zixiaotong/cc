@@ -19,26 +19,26 @@ public class sshKeygen {
 
     @Test
     public void test1() throws Exception {
-        JSch jsch = new JSch(); // ´´½¨JSch¶ÔÏó
-        String userName = "root";// ÓÃ»§Ãû
-        String password = "zhtx1.q";// ÃÜÂë
-        String host = "192.168.102.185";// ·şÎñÆ÷µØÖ·
-        int port = 22;// ¶Ë¿ÚºÅ
-        String cmd = "ssh -l root 192.168.102.190;ifconfig";// ÒªÔËĞĞµÄÃüÁî
+        JSch jsch = new JSch(); // åˆ›å»ºJSchå¯¹è±¡
+        String userName = "root";// ç”¨æˆ·å
+        String password = "zhtx1.q";// å¯†ç 
+        String host = "192.168.102.185";// æœåŠ¡å™¨åœ°å€
+        int port = 22;// ç«¯å£å·
+        String cmd = "ssh -l root 192.168.102.190;ifconfig";// è¦è¿è¡Œçš„å‘½ä»¤
 
-        Session session = jsch.getSession(userName, host, port); // ¸ù¾İÓÃ»§Ãû£¬Ö÷»úip£¬¶Ë¿Ú»ñÈ¡Ò»¸öSession¶ÔÏó
-        session.setPassword(password); // ÉèÖÃÃÜÂë
+        Session session = jsch.getSession(userName, host, port); // æ ¹æ®ç”¨æˆ·åï¼Œä¸»æœºipï¼Œç«¯å£è·å–ä¸€ä¸ªSessionå¯¹è±¡
+        session.setPassword(password); // è®¾ç½®å¯†ç 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
-        session.setConfig(config); // ÎªSession¶ÔÏóÉèÖÃproperties
+        session.setConfig(config); // ä¸ºSessionå¯¹è±¡è®¾ç½®properties
         int timeout = 60000000;
-        session.setTimeout(timeout); // ÉèÖÃtimeoutÊ±¼ä
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.setTimeout(timeout); // è®¾ç½®timeoutæ—¶é—´
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         channelExec.connect();
         int exitStatus = channelExec.getExitStatus();
-        System.out.println("1exitStatus£º" + exitStatus);
+        System.out.println("1exitStatusï¼š" + exitStatus);
         InputStream in = channelExec.getInputStream();
 
         BufferedReader reader = new BufferedReader(new InputStreamReader(in, Charset.forName("UTF-8")));
@@ -49,7 +49,7 @@ public class sshKeygen {
             System.out.println("buf:" + buf);
         }
         int exitStatus1 = channelExec.getExitStatus();
-        System.out.println("2exitStatus£º" + exitStatus1);
+        System.out.println("2exitStatusï¼š" + exitStatus1);
         channelExec.disconnect();
         if (null != session) {
             session.disconnect();

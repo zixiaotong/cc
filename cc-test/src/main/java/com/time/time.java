@@ -11,9 +11,13 @@ import org.junit.Test;
  */
 public class time {
 
+    /**
+     * 展示时分秒毫秒
+     */
     @Test
     public void test1() {
-        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SS");//其中yyyy-MM-dd是你要表示的格式
+        //其中yyyy-MM-dd是你要表示的格式
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss:SS");
         for (int i = 0; i <= 1000000; i++) {
             // 可以任意组合，不限个数和次序；具体表示为：MM-month,dd-day,yyyy-year;kk-hour,mm-minute,ss-second;
             String str = sdf.format(new Date());

@@ -39,11 +39,9 @@ public class JschUtils {
             session.setPassword(password);
             Properties config = new Properties();
             config.put("StrictHostKeyChecking", "no");
-            // 为Session对象设置properties
             session.setConfig(config);
             session.setTimeout(timeout);
-            // 通过Session建立链接
-            session.connect(30*1000);
+            session.connect(30 * 1000);
         } catch (Exception e) {
             e.printStackTrace();
         }

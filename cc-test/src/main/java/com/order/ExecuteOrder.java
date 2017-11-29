@@ -1,4 +1,4 @@
-package com.cn.order;
+package com.order;
 
 /**
  * Created by shanglei on 2017/6/7.
@@ -17,22 +17,22 @@ class Abc {
     private final static int t = 0;
 
     Abc() {
-        System.out.println("======¹¹Ôì·½·¨=========");
+        System.out.println("======ï¿½ï¿½ï¿½ì·½ï¿½ï¿½=========");
     }
 
     public static void c() {
-        System.out.println("==========¾²Ì¬·½·¨===========");
+        System.out.println("==========ï¿½ï¿½Ì¬ï¿½ï¿½ï¿½ï¿½===========");
     }
 
     static {
         int b = 2;
-        System.out.println("=====¾²Ì¬¿é======");
+        System.out.println("=====ï¿½ï¿½Ì¬ï¿½ï¿½======");
     }
     public static Bcd i = new Bcd();
 }
 
 class Bcd {
     Bcd() {
-        System.out.println("======¾²Ì¬³ÉÔ±±äÁ¿========");
+        System.out.println("======ï¿½ï¿½Ì¬ï¿½ï¿½Ô±ï¿½ï¿½ï¿½ï¿½========");
     }
 }

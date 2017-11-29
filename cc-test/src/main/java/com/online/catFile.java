@@ -14,7 +14,7 @@ import com.utils.JschUtils;
 public class catFile {
 
     /**
-     * 执行多条命令，返回查看的文件内容
+     * 鎵ц澶氭潯鍛戒护锛岃繑鍥炴煡鐪嬬殑鏂囦欢鍐呭
      *
      * @param args
      * @throws Exception

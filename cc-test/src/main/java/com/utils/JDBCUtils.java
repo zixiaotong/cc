@@ -11,10 +11,6 @@ import java.sql.Statement;
  */
 public class JDBCUtils {
 
-    /**
-     * 插入一条记录，传sql
-     */
-
     public static void insertData(String sql) {
 
         Connection connection = null;
@@ -28,7 +24,7 @@ public class JDBCUtils {
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
-                System.out.println("插入成功");
+                System.out.println("executeUpdate fail");
             }
 
         } catch (Exception e) {
@@ -54,7 +50,6 @@ public class JDBCUtils {
     }
 
     public static void updata(String sql) {
-
         Connection connection = null;
         Statement statement = null;
         try {
@@ -66,7 +61,7 @@ public class JDBCUtils {
             statement = connection.createStatement();
             int i = statement.executeUpdate(sql);
             if (i > 0) {
-                System.out.println("插入成功");
+                System.out.println("executeUpdate fail");
             }
 
         } catch (Exception e) {

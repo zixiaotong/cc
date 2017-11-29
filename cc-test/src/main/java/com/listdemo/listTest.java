@@ -37,7 +37,6 @@ public class listTest {
     @Test
     public void test2() {
         Integer ss = 0;
-
         System.out.println(ss.toString());
     }
 

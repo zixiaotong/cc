@@ -20,26 +20,26 @@ import com.utils.JDBCUtils;
 public class readLog {
 
     /**
-     * ÄÃµ½ÈÕÖ¾ÎÄ¼ş´òÓ¡µÄÊä³ö
+     * æ‹¿åˆ°æ—¥å¿—æ–‡ä»¶æ‰“å°çš„è¾“å‡º
      *
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        JSch jsch = new JSch(); // ´´½¨JSch¶ÔÏó
-        String userName = "root";// ÓÃ»§Ãû
-        String password = "zhtx1.q";// ÃÜÂë
-        String host = "192.168.102.51";// ·şÎñÆ÷µØÖ·
-        int port = 22;// ¶Ë¿ÚºÅ
-        String cmd = "tail -f /data/tomcat_user/logs/catalina.out";// ÒªÔËĞĞµÄÃüÁî
-        Session session = jsch.getSession(userName, host, port); // ¸ù¾İÓÃ»§Ãû£¬Ö÷»úip£¬¶Ë¿Ú»ñÈ¡Ò»¸öSession¶ÔÏó
-        session.setPassword(password); // ÉèÖÃÃÜÂë
+        JSch jsch = new JSch(); // åˆ›å»ºJSchå¯¹è±¡
+        String userName = "root";// ç”¨æˆ·å
+        String password = "zhtx1.q";// å¯†ç 
+        String host = "192.168.102.51";// æœåŠ¡å™¨åœ°å€
+        int port = 22;// ç«¯å£å·
+        String cmd = "tail -f /data/tomcat_user/logs/catalina.out";// è¦è¿è¡Œçš„å‘½ä»¤
+        Session session = jsch.getSession(userName, host, port); // æ ¹æ®ç”¨æˆ·åï¼Œä¸»æœºipï¼Œç«¯å£è·å–ä¸€ä¸ªSessionå¯¹è±¡
+        session.setPassword(password); // è®¾ç½®å¯†ç 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
-        session.setConfig(config); // ÎªSession¶ÔÏóÉèÖÃproperties
+        session.setConfig(config); // ä¸ºSessionå¯¹è±¡è®¾ç½®properties
         int timeout = 60000000;
-        session.setTimeout(timeout); // ÉèÖÃtimeoutÊ±¼ä
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.setTimeout(timeout); // è®¾ç½®timeoutæ—¶é—´
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         channelExec.setInputStream(null);
@@ -49,7 +49,7 @@ public class readLog {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in, Charset.forName("UTF-8")));
 
         StringBuffer stringBuffer = new StringBuffer();
-        // ÓÃÀ´´æ·Å×ÜÊı¾İ
+        // ç”¨æ¥å­˜æ”¾æ€»æ•°æ®
         List<String> lists = new ArrayList<String>();
         String buf;
         while ((buf = reader.readLine()) != null) {
@@ -83,7 +83,7 @@ public class readLog {
 
         JDBCUtils.insertData(sql1);
         int exitStatus = channelExec.getExitStatus();
-        System.out.println("exitStatus£º" + exitStatus);//Èç¹û·µ»Ø0£¬ÔòËµÃ÷£¬Ö´ĞĞsh½Å±¾Íê±Ï¡£
+        System.out.println("exitStatusï¼š" + exitStatus);//å¦‚æœè¿”å›0ï¼Œåˆ™è¯´æ˜ï¼Œæ‰§è¡Œshè„šæœ¬å®Œæ¯•ã€‚
 
         reader.close();
         channelExec.disconnect();

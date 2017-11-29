@@ -20,42 +20,42 @@ import com.utils.JDBCUtils;
 public class readSh {
 
     /**
-     * ÄÃµ½½Å±¾´òÓ¡µÄÊä³ö
+     * æ‹¿åˆ°è„šæœ¬æ‰“å°çš„è¾“å‡º
      *
      * @param args
      * @throws Exception
      */
     public static void main(String[] args) throws Exception {
-        JSch jsch = new JSch(); // ´´½¨JSch¶ÔÏó
-        String userName = "root";// ÓÃ»§Ãû
-        String password = "zhtx1.q";// ÃÜÂë
-        //String host = "192.168.102.185";// ·şÎñÆ÷µØÖ·
-        String host = "192.168.102.157";// ·şÎñÆ÷µØÖ·
-        int port = 22;// ¶Ë¿ÚºÅ
-        // String cmd = "sh /usr/local/autodeploy/web_status.sh";// ÒªÔËĞĞµÄÃüÁî
+        JSch jsch = new JSch(); // åˆ›å»ºJSchå¯¹è±¡
+        String userName = "root";// ç”¨æˆ·å
+        String password = "zhtx1.q";// å¯†ç 
+        //String host = "192.168.102.185";// æœåŠ¡å™¨åœ°å€
+        String host = "192.168.102.157";// æœåŠ¡å™¨åœ°å€
+        int port = 22;// ç«¯å£å·
+        // String cmd = "sh /usr/local/autodeploy/web_status.sh";// è¦è¿è¡Œçš„å‘½ä»¤
         /*
-        ÔÚÆô¶¯Ê±Óöµ½ÁËÒ»¸öÎÊÌâ1£º
+        åœ¨å¯åŠ¨æ—¶é‡åˆ°äº†ä¸€ä¸ªé—®é¢˜1ï¼š
         Neither the JAVA_HOME nor the JRE_HOME environment variable is definedAt least one of these environment
         variable is needed to run this program
-         ÏÈ¿´TomcatµÄstartup.bat£¬Ëüµ÷ÓÃÁËcatalina.bat,¶øcatalina.batÔòµ÷ÓÃÁËsetclasspath.bat¡£Ö»ÒªÔÚsetclasspath.batµÄ¿ªÍ·ÉùÃ÷»·¾³±äÁ¿ ¼´¿É¡¢
-         ´ò¿ªtomcatµÄbinÄ¿Â¼ÏÂÃæµÄsetclasspath.sh
+         å…ˆçœ‹Tomcatçš„startup.batï¼Œå®ƒè°ƒç”¨äº†catalina.bat,è€Œcatalina.batåˆ™è°ƒç”¨äº†setclasspath.batã€‚åªè¦åœ¨setclasspath.batçš„å¼€å¤´å£°æ˜ç¯å¢ƒå˜é‡ å³å¯ã€
+         æ‰“å¼€tomcatçš„binç›®å½•ä¸‹é¢çš„setclasspath.sh
          export JAVA_HOME=/usr/java/jdk1.8.0_51
          export JRE_HOME=$JAVA_HOME/jre
 
-         Óöµ½ÎÊÌâ2£º
-         a½Å±¾µ÷ÓÃb½Å±¾£¬b½Å±¾µ÷ÓÃc½Å±¾ µÄÇé¿ö£¬µ÷ÓÃ½Å±¾ÖĞĞèÒªĞ´ÉÏ½Å±¾È«Â·¾¶¡£
+         é‡åˆ°é—®é¢˜2ï¼š
+         aè„šæœ¬è°ƒç”¨bè„šæœ¬ï¼Œbè„šæœ¬è°ƒç”¨cè„šæœ¬ çš„æƒ…å†µï¼Œè°ƒç”¨è„šæœ¬ä¸­éœ€è¦å†™ä¸Šè„šæœ¬å…¨è·¯å¾„ã€‚
          */
-        //String cmd = "sh /data/apache-tomcat-7.0.73shangleitest/bin/startup.sh";// ÒªÔËĞĞµÄÃüÁî
-        String cmd = "sh /usr/local/test/1_kill_tomcat.sh myaccountweb /data/tomcat/_myaccountweb webapps ROOT.war http://192.168.102.157:8079/alert/heart /usr/local/test/ 192.168.102.157";// ÒªÔËĞĞµÄÃüÁî
-        //String cmd = "sh /data/apache-tomcat-7.0.73shangleitest/bin/a.sh";// ÒªÔËĞĞµÄÃüÁî
-        Session session = jsch.getSession(userName, host, port); // ¸ù¾İÓÃ»§Ãû£¬Ö÷»úip£¬¶Ë¿Ú»ñÈ¡Ò»¸öSession¶ÔÏó
-        session.setPassword(password); // ÉèÖÃÃÜÂë
+        //String cmd = "sh /data/apache-tomcat-7.0.73shangleitest/bin/startup.sh";// è¦è¿è¡Œçš„å‘½ä»¤
+        String cmd = "sh /usr/local/test/1_kill_tomcat.sh myaccountweb /data/tomcat/_myaccountweb webapps ROOT.war http://192.168.102.157:8079/alert/heart /usr/local/test/ 192.168.102.157";// è¦è¿è¡Œçš„å‘½ä»¤
+        //String cmd = "sh /data/apache-tomcat-7.0.73shangleitest/bin/a.sh";// è¦è¿è¡Œçš„å‘½ä»¤
+        Session session = jsch.getSession(userName, host, port); // æ ¹æ®ç”¨æˆ·åï¼Œä¸»æœºipï¼Œç«¯å£è·å–ä¸€ä¸ªSessionå¯¹è±¡
+        session.setPassword(password); // è®¾ç½®å¯†ç 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
-        session.setConfig(config); // ÎªSession¶ÔÏóÉèÖÃproperties
+        session.setConfig(config); // ä¸ºSessionå¯¹è±¡è®¾ç½®properties
         int timeout = 60000000;
-        session.setTimeout(timeout); // ÉèÖÃtimeoutÊ±¼ä
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.setTimeout(timeout); // è®¾ç½®timeoutæ—¶é—´
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         //channelExec.setInputStream(null);
@@ -65,7 +65,7 @@ public class readSh {
         BufferedReader reader = new BufferedReader(new InputStreamReader(in, Charset.forName("UTF-8")));
         String buf;
         StringBuffer stringBuffer = new StringBuffer();
-        // ÓÃÀ´´æ·Å×ÜÊı¾İ
+        // ç”¨æ¥å­˜æ”¾æ€»æ•°æ®
         List<String> lists = new ArrayList<>();
         while ((buf = reader.readLine()) != null) {
             lists.add(buf);
@@ -89,7 +89,7 @@ public class readSh {
 
         JDBCUtils.insertData(sql1);
         int exitStatus = channelExec.getExitStatus();
-        System.out.println("exitStatus£º" + exitStatus);//Èç¹û·µ»Ø0£¬ÔòËµÃ÷£¬Ö´ĞĞsh½Å±¾³É¹¦¡£
+        System.out.println("exitStatusï¼š" + exitStatus);//å¦‚æœè¿”å›0ï¼Œåˆ™è¯´æ˜ï¼Œæ‰§è¡Œshè„šæœ¬æˆåŠŸã€‚
         reader.close();
         channelExec.disconnect();
         if (null != session) {

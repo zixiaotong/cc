@@ -7,16 +7,11 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 
 /**
- * 定义文件名，传数据
- *
  * @author shanglei
  * @date 2017/7/25.
  */
 public class ReadWriteFileUtils {
 
-    /**
-     * 写文件.
-     */
     public static void writeTxtFile(String path, String newData) throws IOException {
         File filename = new File(path);
         if (!filename.exists()) {
@@ -30,12 +25,10 @@ public class ReadWriteFileUtils {
             while ((read = bufread.readLine()) != null) {
                 readStr = readStr + read + "\r\n";
             }
-
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        //先读取原有文件内容，然后进行写入操作
         String filein = readStr + newData;
         RandomAccessFile mm = null;
         try {
@@ -53,8 +46,8 @@ public class ReadWriteFileUtils {
             }
         }
     }
+
     public static void addLogData(String data) throws IOException {
-        // 路径及名称，需要再仔细斟酌定义
         writeTxtFile("/Users/shanglei/Downloads/suncity.txt", data);
     }
 }

@@ -18,16 +18,16 @@ public class mvFile {
     @Test
     public void test() throws IOException {
         /**
-         * ÒÆ¶¯ÎÄ¼ş
+         * ç§»åŠ¨æ–‡ä»¶
          */
         //String command = "cd /usr/shangleitest;mv bin /usr/shangleitest/apache-tomcat-7.0.73";
         /**
-         * ¸´ÖÆÎÄ¼ş
+         * å¤åˆ¶æ–‡ä»¶
          */
         //String command = "cd /usr/shangleitest/apache-tomcat-7.0.73;cp RUNNING.txt /usr/shangleitest/";
 
         /**
-         * Ïò²»Í¨»úÆ÷·¢ËÍÎÄ¼ş
+         * å‘ä¸é€šæœºå™¨å‘é€æ–‡ä»¶
          */
         String command = "cd /usr/shangleitest;scp RUNNING.txt root@192.168.102.79:/usr/";
         InputStream in = JschUtils.executeExec("192.168.102.185", 22, "root",

@@ -19,9 +19,11 @@ public class readHtml {
         File file = new File("/Users/shanglei/Downloads/zhanghetianxia/111.html");
         StringBuilder result = new StringBuilder();
         try {
-            BufferedReader br = new BufferedReader(new FileReader(file));//构造一个BufferedReader类来读取文件
+            //构造一个BufferedReader类来读取文件
+            BufferedReader br = new BufferedReader(new FileReader(file));
             String s;
-            while ((s = br.readLine()) != null) {//使用readLine方法，一次读一行
+            //使用readLine方法，一次读一行
+            while ((s = br.readLine()) != null) {
                 result.append(System.lineSeparator() + s);
             }
             br.close();

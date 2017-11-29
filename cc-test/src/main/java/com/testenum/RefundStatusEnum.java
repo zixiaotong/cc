@@ -1,8 +1,6 @@
 package com.testenum;
 
 /**
- * Created by shanglei on 2017/2/19.
- *
  * @author shanglei
  * @date 2017/02/19
  */

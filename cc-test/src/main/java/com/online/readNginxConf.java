@@ -28,7 +28,7 @@ import org.junit.Test;
  */
 public class readNginxConf {
     /**
-     * ¶ÁÈ¡nginxÅäÖÃÎÄ¼ş
+     * è¯»å–nginxé…ç½®æ–‡ä»¶
      */
     @Test
     public void test1() throws Exception {
@@ -54,7 +54,7 @@ public class readNginxConf {
         InputStream in = channelExec.getInputStream();
         NgxConfig conf = NgxConfig.read(in);
         //NgxConfig conf = NgxConfig.read("/Users/shanglei/Downloads/nginx.conf");
-        //¸ñÊ½»¯ÅäÖÃÎÄ¼ş
+        //æ ¼å¼åŒ–é…ç½®æ–‡ä»¶
         NgxDumper dumper = new NgxDumper(conf);
         dumper.dump(System.out);
 
@@ -101,8 +101,8 @@ public class readNginxConf {
     }
 
     /**
-     * ¸ù¾İupstream ²éÕÒ server
-     * Ìí¼ÓÒÆ³ı½Úµã
+     * æ ¹æ®upstream æŸ¥æ‰¾ server
+     * æ·»åŠ ç§»é™¤èŠ‚ç‚¹
      *
      * @throws IOException
      */
@@ -155,20 +155,20 @@ public class readNginxConf {
         }
     }
     public static void aaa(String s) throws Exception {
-        JSch jsch = new JSch(); // ´´½¨JSch¶ÔÏó
-        String userName = "root";// ÓÃ»§Ãû
-        String password = "zhtx1.q";// ÃÜÂë
-        String host = "192.168.102.190";// ·şÎñÆ÷µØÖ·
-        int port = 22;// ¶Ë¿ÚºÅ
-        String cmd = "cat " + s;// ÒªÔËĞĞµÄÃüÁî
-        Session session = jsch.getSession(userName, host, port); // ¸ù¾İÓÃ»§Ãû£¬Ö÷»úip£¬¶Ë¿Ú»ñÈ¡Ò»¸öSession¶ÔÏó
-        session.setPassword(password); // ÉèÖÃÃÜÂë
+        JSch jsch = new JSch(); // åˆ›å»ºJSchå¯¹è±¡
+        String userName = "root";// ç”¨æˆ·å
+        String password = "zhtx1.q";// å¯†ç 
+        String host = "192.168.102.190";// æœåŠ¡å™¨åœ°å€
+        int port = 22;// ç«¯å£å·
+        String cmd = "cat " + s;// è¦è¿è¡Œçš„å‘½ä»¤
+        Session session = jsch.getSession(userName, host, port); // æ ¹æ®ç”¨æˆ·åï¼Œä¸»æœºipï¼Œç«¯å£è·å–ä¸€ä¸ªSessionå¯¹è±¡
+        session.setPassword(password); // è®¾ç½®å¯†ç 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
-        session.setConfig(config); // ÎªSession¶ÔÏóÉèÖÃproperties
+        session.setConfig(config); // ä¸ºSessionå¯¹è±¡è®¾ç½®properties
         int timeout = 60000000;
-        session.setTimeout(timeout); // ÉèÖÃtimeoutÊ±¼ä
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.setTimeout(timeout); // è®¾ç½®timeoutæ—¶é—´
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         channelExec.connect();
@@ -206,27 +206,27 @@ public class readNginxConf {
 
     @Test
     public void test7() throws Exception {
-        JSch jsch = new JSch(); // ´´½¨JSch¶ÔÏó
-        String userName = "root";// ÓÃ»§Ãû
-        String password = "zhtx1.q";// ÃÜÂë
-        String host = "192.168.102.190";// ·şÎñÆ÷µØÖ·
-        int port = 22;// ¶Ë¿ÚºÅ
-        String cmd = "cat /usr/local/nginx/conf/nginx_ccoop.conf";// ÒªÔËĞĞµÄÃüÁî
-        Session session = jsch.getSession(userName, host, port); // ¸ù¾İÓÃ»§Ãû£¬Ö÷»úip£¬¶Ë¿Ú»ñÈ¡Ò»¸öSession¶ÔÏó
-        session.setPassword(password); // ÉèÖÃÃÜÂë
+        JSch jsch = new JSch(); // åˆ›å»ºJSchå¯¹è±¡
+        String userName = "root";// ç”¨æˆ·å
+        String password = "zhtx1.q";// å¯†ç 
+        String host = "192.168.102.190";// æœåŠ¡å™¨åœ°å€
+        int port = 22;// ç«¯å£å·
+        String cmd = "cat /usr/local/nginx/conf/nginx_ccoop.conf";// è¦è¿è¡Œçš„å‘½ä»¤
+        Session session = jsch.getSession(userName, host, port); // æ ¹æ®ç”¨æˆ·åï¼Œä¸»æœºipï¼Œç«¯å£è·å–ä¸€ä¸ªSessionå¯¹è±¡
+        session.setPassword(password); // è®¾ç½®å¯†ç 
         Properties config = new Properties();
         config.put("StrictHostKeyChecking", "no");
-        session.setConfig(config); // ÎªSession¶ÔÏóÉèÖÃproperties
+        session.setConfig(config); // ä¸ºSessionå¯¹è±¡è®¾ç½®properties
         int timeout = 60000000;
-        session.setTimeout(timeout); // ÉèÖÃtimeoutÊ±¼ä
+        session.setTimeout(timeout); // è®¾ç½®timeoutæ—¶é—´
         session.setConfig("userauth.gssapi-with-mic", "no");
         session.setConfig("StrictHostKeyChecking", "no");
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         channelExec.connect();
         InputStream in = channelExec.getInputStream();
-        //¸ñÊ½»¯ÅäÖÃÎÄ¼ş
+        //æ ¼å¼åŒ–é…ç½®æ–‡ä»¶
         NgxConfig conf = NgxConfig.read(in);
         NgxDumper dumper = new NgxDumper(conf);
         dumper.dump(System.out);
@@ -253,13 +253,13 @@ public class readNginxConf {
         JSch jsch = new JSch();
         String userName = "root";
         String password = "zhtx1.q";
-        //String host = "192.168.102.157";// ·şÎñÆ÷µØÖ·
-        String host = "192.168.102.146";// ·şÎñÆ÷µØÖ·
+        //String host = "192.168.102.157";// æœåŠ¡å™¨åœ°å€
+        String host = "192.168.102.146";// æœåŠ¡å™¨åœ°å€
         //String host = "192.168.102.190";
         int port = 8802;
         String cmd = "/usr/local/nginx/sbin/nginx -s reload";
         //String cmd = "cd /root";
-        //String cmd1 = "cat /usr/zhtx/yuncom/fwzweb/fwz/css/details.css";// ÒªÔËĞĞµÄÃüÁî
+        //String cmd1 = "cat /usr/zhtx/yuncom/fwzweb/fwz/css/details.css";// è¦è¿è¡Œçš„å‘½ä»¤
         Session session = jsch.getSession(userName, host, port);
         session.setPassword(password);
         Properties config = new Properties();
@@ -268,7 +268,7 @@ public class readNginxConf {
         session.setTimeout(60000000);
         //session.setConfig("userauth.gssapi-with-mic", "no");
         session.setConfig("StrictHostKeyChecking", "no");
-        session.connect(); // Í¨¹ıSession½¨Á¢Á´½Ó
+        session.connect(); // é€šè¿‡Sessionå»ºç«‹é“¾æ¥
         ChannelExec channelExec = (ChannelExec)session.openChannel("exec");
         channelExec.setCommand(cmd);
         channelExec.connect();
@@ -282,15 +282,15 @@ public class readNginxConf {
         }
         reader.close();
         Thread.sleep(1);
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         channelExec.disconnect();
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         if (null != session) {
             session.disconnect();
-            System.out.println("exitStatus£º" + channelExec.getExitStatus());
+            System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         }
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
-        //Èç¹û·µ»Ø0£¬ÔòËµÃ÷£¬Ö´ĞĞsh½Å±¾³É¹¦¡£
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
+        //å¦‚æœè¿”å›0ï¼Œåˆ™è¯´æ˜ï¼Œæ‰§è¡Œshè„šæœ¬æˆåŠŸã€‚
     }
 
     @Test
@@ -323,15 +323,15 @@ public class readNginxConf {
         }
         reader.close();
         Thread.sleep(1);
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         channelExec.disconnect();
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         if (null != session) {
             session.disconnect();
-            System.out.println("exitStatus£º" + channelExec.getExitStatus());
+            System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
         }
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
-        //Èç¹û·µ»Ø0£¬ÔòËµÃ÷£¬Ö´ĞĞsh½Å±¾³É¹¦¡£
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
+        //å¦‚æœè¿”å›0ï¼Œåˆ™è¯´æ˜ï¼Œæ‰§è¡Œshè„šæœ¬æˆåŠŸã€‚
     }
 
     @Test
@@ -367,7 +367,7 @@ public class readNginxConf {
         if (null != session) {
             session.disconnect();
         }
-        System.out.println("exitStatus£º" + channelExec.getExitStatus());
-        //Èç¹û·µ»Ø0£¬ÔòËµÃ÷£¬Ö´ĞĞsh½Å±¾³É¹¦¡£
+        System.out.println("exitStatusï¼š" + channelExec.getExitStatus());
+        //å¦‚æœè¿”å›0ï¼Œåˆ™è¯´æ˜ï¼Œæ‰§è¡Œshè„šæœ¬æˆåŠŸã€‚
     }
 }
