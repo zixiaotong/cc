@@ -1,33 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-service" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/httpclient" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/jdk8" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/online" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/testenum/RefundStatusEnum.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/Ticket.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/TicketDemo.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/timertask/Test1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/timertask/TimerTask1.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/com/thread/wenhu/Task.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/cn/mode/decorator/ConcreteComponent.java" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/jdk8/stream.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/mode/simple_mode/单例设计模式.txt" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/Caller.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/mode/simple_mode/单例设计模式.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/Caller.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/ChannelShellDemo.java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/catFile.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/mvFile.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readLog.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readNginxConf.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readSh.java" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/sshKeygen.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/catFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/mvFile.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readLog.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readNginxConf.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/readSh.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cc-test/src/main/java/com/online/sshKeygen.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cc-test/src/resources/test.properties" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/test/com" charset="GBK" />
-    <file url="file://$PROJECT_DIR$/cc-test/src/test/com/mode" charset="GBK" />
     <file url="file://$PROJECT_DIR$/cc-web" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
