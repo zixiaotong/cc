@@ -16,7 +16,7 @@ import org.junit.Test;
 public class WordCountDriver {
 
     /**
-     * 集群中运行模式打成jar包
+     * 集群中运行模式打成jar包OK
      *
      * @param args
      * @throws Exception
@@ -37,7 +37,7 @@ public class WordCountDriver {
     }
 
     /**
-     * 本地只运行程序，数据取的是hdfs上的，计算数据在本地
+     * 本地只运行程序，数据取的是hdfs上的，计算数据在本地OK
      */
     @Test
     public void test1() throws Exception {
@@ -58,7 +58,7 @@ public class WordCountDriver {
     }
 
     /**
-     * 本地只运行程序，数据在本地，计算数据在本地
+     * 本地只运行程序，数据在本地，计算数据在本地OK
      */
     @Test
     public void test2() throws Exception {
@@ -78,7 +78,7 @@ public class WordCountDriver {
 
     /**
      * 本地只运行程序，数据取的是hdfs上的，计算数据也在yarn集群上
-     * 需要加四个xml
+     * 需要加四个xml OK
      */
     @Test
     public void test3() throws Exception {
