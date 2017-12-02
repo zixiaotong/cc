@@ -98,4 +98,29 @@ public class WordCountDriver {
         wcjob.waitForCompletion(true);
     }
 
+    // 以上都是在linux上运行
+
+    // 下面例子在mac上运行
+
+    /**
+     * 跑本地模式 OK
+     *
+     * @throws Exception
+     */
+    @Test
+    public void test4() throws Exception {
+        Configuration conf = new Configuration();
+        Job wcjob = Job.getInstance(conf);
+        wcjob.setJarByClass(WordCountDriver.class);
+        wcjob.setMapperClass(WordCountMapper.class);
+        wcjob.setReducerClass(WordCountReducer.class);
+        wcjob.setMapOutputKeyClass(Text.class);
+        wcjob.setMapOutputValueClass(LongWritable.class);
+        wcjob.setOutputKeyClass(Text.class);
+        wcjob.setOutputValueClass(LongWritable.class);
+        FileInputFormat.setInputPaths(wcjob, new Path("/Users/shanglei/Downloads/wordcount/data/"));
+        FileOutputFormat.setOutputPath(wcjob, new Path("/Users/shanglei/Downloads/wordcount/output/"));
+        wcjob.waitForCompletion(true);
+    }
+
 }
