@@ -1,4 +1,4 @@
-package com.thread;
+package com.thread.floor;
 
 import java.io.File;
 import java.io.FileOutputStream;

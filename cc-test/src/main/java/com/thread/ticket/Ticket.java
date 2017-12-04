@@ -1,4 +1,4 @@
-package com.thread;
+package com.thread.ticket;
 
 /*
  * 同步代码块：
