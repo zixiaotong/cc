@@ -131,8 +131,11 @@ public class HttpRequest {
         //System.out.println(s);
 
         //发送 POST 请求
-        String sr = HttpRequest.sendPost("http://goodsapi.zhangheyun.com/api/GoodsInfo/GetDispatchShopsIDAndName",
-            "{\"SupermarketId\":465159,\"SsId\":27}");
+        //String sr = HttpRequest.sendPost("http://goodsapi.zhangheyun.com/api/GoodsInfo/GetDispatchShopsIDAndName",
+        //    "{\"SupermarketId\":465159,\"SsId\":27}");
+
+        String sr = HttpRequest.sendPost("http://192.168.200.108:8104/services/alert/heart",
+            "");
         System.out.println(sr);
     }
 }
