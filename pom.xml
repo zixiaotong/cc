@@ -11,7 +11,7 @@
     <modules>
         <module>cc-web</module>
         <module>cc-service</module>
-        <module>cc-test</module>
+        <!--<module>cc-test</module>-->
     </modules>
 
     <!--版本控制-->

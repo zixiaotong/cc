@@ -31,5 +31,11 @@ public class StringTest {
         System.out.println(str.hashCode());
         System.out.println(str.hashCode());
     }
+
+    @Test
+    public void test4() {
+        String desc=String.format("由\"%s\"修改为\"%s\";", "1", "2");
+        System.out.println(desc);
+    }
 }
 
