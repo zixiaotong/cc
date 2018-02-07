@@ -1,5 +1,8 @@
 package com.strtest;
 
+import java.math.BigDecimal;
+import java.text.DecimalFormat;
+
 import org.junit.Test;
 
 /**
@@ -36,6 +39,14 @@ public class StringTest {
     public void test4() {
         String desc=String.format("由\"%s\"修改为\"%s\";", "1", "2");
         System.out.println(desc);
+    }
+
+    @Test
+    public void test5() {
+        BigDecimal decimal = new BigDecimal("0.5");
+
+        BigDecimal f1 = decimal.setScale(2, BigDecimal.ROUND_HALF_UP);
+        System.out.println(f1);
     }
 }
 

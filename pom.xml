@@ -11,7 +11,7 @@
     <modules>
         <module>cc-web</module>
         <module>cc-service</module>
-        <!--<module>cc-test</module>-->
+        <module>cc-test</module>
     </modules>
 
     <!--版本控制-->
@@ -189,39 +189,39 @@
 
     <!--发布环境针对配置-->
     <profiles>
-        <profile>
-            <id>online</id>
-            <properties>
-                <dubbox.register>true</dubbox.register>
-                <dubbox.timeout>3000</dubbox.timeout>
-                <dubbox.version>1.0.0</dubbox.version>
-                <war.skipjspath></war.skipjspath>
-                <log4j.level>WARN</log4j.level>
-                <disconf.conf_server_host>disconf.zhanghetianxia.com</disconf.conf_server_host>
-                <disconf.version>1_0_0_0</disconf.version>
-                <disconf.env>online</disconf.env>
-                <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
-                <disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>
-            </properties>
-        </profile>
-        <profile>
-            <id>local</id>
-            <properties>
-                <dubbox.register>false</dubbox.register>
-                <dubbox.timeout>3000</dubbox.timeout>
-                <dubbox.version>1.0.0</dubbox.version>
-                <war.skipjspath></war.skipjspath>
-                <log4j.level>DEBUG</log4j.level>
-                <disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>
-                <disconf.version>1_0_0_0</disconf.version>
-                <disconf.env>local</disconf.env>
-                <disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>
-                <disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>
-            </properties>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-        </profile>
+        <!--<profile>-->
+            <!--<id>online</id>-->
+            <!--<properties>-->
+                <!--<dubbox.register>true</dubbox.register>-->
+                <!--<dubbox.timeout>3000</dubbox.timeout>-->
+                <!--<dubbox.version>1.0.0</dubbox.version>-->
+                <!--<war.skipjspath></war.skipjspath>-->
+                <!--<log4j.level>WARN</log4j.level>-->
+                <!--<disconf.conf_server_host>disconf.zhanghetianxia.com</disconf.conf_server_host>-->
+                <!--<disconf.version>1_0_0_0</disconf.version>-->
+                <!--<disconf.env>online</disconf.env>-->
+                <!--<disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>-->
+                <!--<disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>-->
+            <!--</properties>-->
+        <!--</profile>-->
+        <!--<profile>-->
+            <!--<id>local</id>-->
+            <!--<properties>-->
+                <!--<dubbox.register>false</dubbox.register>-->
+                <!--<dubbox.timeout>3000</dubbox.timeout>-->
+                <!--<dubbox.version>1.0.0</dubbox.version>-->
+                <!--<war.skipjspath></war.skipjspath>-->
+                <!--<log4j.level>DEBUG</log4j.level>-->
+                <!--<disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>-->
+                <!--<disconf.version>1_0_0_0</disconf.version>-->
+                <!--<disconf.env>local</disconf.env>-->
+                <!--<disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>-->
+                <!--<disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>-->
+            <!--</properties>-->
+            <!--<activation>-->
+                <!--<activeByDefault>true</activeByDefault>-->
+            <!--</activation>-->
+        <!--</profile>-->
 
     </profiles>
 
