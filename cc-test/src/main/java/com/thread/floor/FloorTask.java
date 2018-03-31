@@ -8,8 +8,10 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 import com.bean.User;
 
@@ -32,8 +34,8 @@ public class FloorTask {
             user.setName(i + "zhanghe");
             userList.add(user);
         }
-        //try {
-            //final CountDownLatch cdl = new CountDownLatch(userList.size());
+        try {
+            final CountDownLatch cdl = new CountDownLatch(userList.size());
             for (User user : userList) {
                 executorService.execute(new Runnable() {
                     @Override
@@ -54,15 +56,15 @@ public class FloorTask {
                         } catch (IOException e) {
                             e.printStackTrace();
                         }
-                        //cdl.countDown();
-                        //System.out.println("getCount:"+cdl.getCount());
+                        cdl.countDown();
+                        System.out.println("getCount:"+cdl.getCount());
                     }
                 });
             }
-            //cdl.await(50, TimeUnit.SECONDS);
-        //} catch (InterruptedException e) {
-        //    e.printStackTrace();
-        //}
+            cdl.await(50, TimeUnit.SECONDS);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         System.out.println(System.currentTimeMillis() - stat + "毫秒");
     }
 

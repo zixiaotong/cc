@@ -31,6 +31,11 @@
 
     <!--版本依赖-->
     <dependencies>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.46</version>
+        </dependency>
     </dependencies>
 
 </project>

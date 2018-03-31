@@ -12,6 +12,7 @@ import java.util.Properties;
 
 import com.google.common.collect.Maps;
 import com.sun.tools.javac.util.Convert;
+import org.apache.commons.lang.ObjectUtils.Null;
 import org.junit.Test;
 
 public class test {
@@ -156,8 +157,8 @@ public class test {
     @Test
     public void test7() {
 
-        int num = 50;
-        System.out.println("11111:" + num % 2);
+        int num = 51;
+        System.out.println("11111:" + num % 30);
         StringBuffer sb = new StringBuffer();//创建一个StringBuffer容器用于接收对2取模的数
         while (num > 0) {
             sb.append(num % 2);
@@ -270,5 +271,33 @@ public class test {
             + ".jpg\\\"],\\\"unit\\\":\\\"1\\\",\\\"specs\\\":\\\"500\\\"}\","
             + "\"sign\":\"6BD9D782CD4236BFA1197BE168991899\",\"v\":\"1.0\"}";
         System.out.println(b.length());
+    }
+
+
+    @Test
+    public void test111() {
+       String a = "shop_id, shop_name, shop_username, ss_id, ss_name, spu_name, brand_id,\n"
+           + "                 brand_name, cat_one_id, cat_one_name, cat_two_id, cat_two_name, cat_three_id,\n"
+           + "                 cat_three_name, is_import, producer, shelf_life, small_unit_id, small_unit_name,\n"
+           + "                 big_unit_name, big_unit_id, min_buy_count, big_min_buy_count, main_image, other_image,\n"
+           + "                 safe_stock, is_return, commission_rate, shelves, sale_model, order_limit_num,\n"
+           + "                 service_content, price, sort, is_hidden, audit_status, is_del, goodhandlestate,\n"
+           + "                 add_name, companyname, publishtime, returndesc, offshelfreason, nopassreason,\n"
+           + "                 headline, create_time, opt_time, template_id, is_history, add_user_type,\n"
+           + "                 sum_sale_count, sum_stock, unit_transfer, shelf_life_unit, scount";
+       String[] b = a.split(",");
+
+        System.out.println(  b.length);
+
+
+        String c = "?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?, ?, ?, ?, ?, ?, ?, ?, now(),now(), ?,?, ?, ?, ?, ?, ?,?";
+        String[] arr = c.split(",");
+        System.out.println(arr.length);
+    }
+    @Test
+    public void test13() {
+        Integer a = null;
+        //System.out.println(Integer.parseInt(a + ""));
+        System.out.println(a instanceof Integer);
     }
 }
