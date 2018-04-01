@@ -107,7 +107,7 @@ public class WordCountDriver {
     // 下面例子在mac上运行
 
     /**
-     * 跑本地模式 OK
+     * 跑本地模式 OK 记住不能加配置文件
      *
      * @throws Exception
      */
@@ -123,7 +123,7 @@ public class WordCountDriver {
         wcjob.setOutputKeyClass(Text.class);
         wcjob.setOutputValueClass(LongWritable.class);
         FileInputFormat.setInputPaths(wcjob, new Path("/Users/shanglei/Downloads/wordcount/data/"));
-        FileOutputFormat.setOutputPath(wcjob, new Path("/Users/shanglei/Downloads/wordcount/output/"));
+        FileOutputFormat.setOutputPath(wcjob, new Path("/Users/shanglei/Downloads/wordcount/output1/"));
         wcjob.waitForCompletion(true);
     }
 
@@ -145,7 +145,7 @@ public class WordCountDriver {
         wcjob.setOutputKeyClass(Text.class);
         wcjob.setOutputValueClass(LongWritable.class);
         FileInputFormat.setInputPaths(wcjob, new Path("/wordcount/data/"));
-        FileOutputFormat.setOutputPath(wcjob, new Path("/wordcount/output/"));
+        FileOutputFormat.setOutputPath(wcjob, new Path("/wordcount/output2/"));
         wcjob.waitForCompletion(true);
     }
 
