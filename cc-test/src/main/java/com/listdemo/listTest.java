@@ -23,7 +23,7 @@ public class listTest {
         }
         System.out.println(userList.size());
         for (int i = 1; i < userList.size(); i++) {
-            if (userList.get(i).getName().equals("2zhanghe")) {
+            if ("2zhanghe".equals(userList.get(i).getName())) {
                 userList.remove(i);
                 i--;
             }

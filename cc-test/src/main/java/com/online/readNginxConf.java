@@ -117,7 +117,7 @@ public class readNginxConf {
             if ("upstream chaoshi.zhangheyun.com.online.cn {".equals(arrayList1.get(i).toString())) {
                 ArrayList arrayList2 = (ArrayList)((NgxBlock)arrayList1.get(i)).getEntries();
                 for (int j = 0; j < arrayList2.size(); j++) {
-                    if (arrayList2.get(j).toString().equals("server 192.168.102.157:8079 weight=10;")) {
+                    if ("server 192.168.102.157:8079 weight=10;".equals(arrayList2.get(j).toString())) {
                         NgxParam ngxParam = new NgxParam();
                         ngxParam.addValue(new NgxToken("#server 192.168.102.191:8079 weight=12"));
                         arrayList2.remove(j);

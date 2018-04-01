@@ -56,7 +56,7 @@ public class readLog {
 
             StringBuffer s = new StringBuffer(buf);
             for (int i = s.length()-1; i >=0; i--) {
-                if (String.valueOf(s.charAt(i)).equals("'")) {
+                if ("'".equals(String.valueOf(s.charAt(i)))) {
                     s.insert(i,"\\");
                 }
             }

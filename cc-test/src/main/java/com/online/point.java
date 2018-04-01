@@ -27,7 +27,7 @@ public class point {
             if ("upstream payadmin.zhangheyun.com.online.cn {".equals(arrayList1.get(i).toString())) {
                 ArrayList arrayList2 = (ArrayList)((NgxBlock)arrayList1.get(i)).getEntries();
                 for (int j = 0; j < arrayList2.size(); j++) {
-                    if (arrayList2.get(j).toString().equals("server 192.168.102.185:8305 weight=1;")) {
+                    if ("server 192.168.102.185:8305 weight=1;".equals(arrayList2.get(j).toString())) {
                         NgxParam ngxParam = new NgxParam();
                         System.out.println();
                         ngxParam.addValue(new NgxToken("#server 192.168.102.185:8305 weight=1"));
