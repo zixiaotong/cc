@@ -30,7 +30,7 @@ public class stringtest {
         /**
          /usr/local/nginx/conf/nginx.conf
          /usr/local/nginx/conf/webtest/nginx_com_cn.conf
-         获取  nginx.conf
+         锟斤拷取  nginx.conf
          */
         String s = "/usr/local/nginx/conf/webtest/nginx_ccoop.conf";
         String[] name = s.split("/");
@@ -78,9 +78,9 @@ public class stringtest {
 
     @Test
     public void test5() {
-        // 保存a和b共同元素的list
+        // 锟斤拷锟斤拷a锟斤拷b锟斤拷同元锟截碉拷list
         List<String> commonList = new ArrayList<>();
-        // 数组a
+        // 锟斤拷锟斤拷a
         //String[] b = {"1", "2", "3", "4"};
         //String[] a = {"1", "2", "3"};
 
@@ -88,30 +88,26 @@ public class stringtest {
         String[] b = {"1", "2", "3"};
         if (a.length > b.length) {
             System.out.println("D");
-            // 数组b转换的list
+            // 锟斤拷锟斤拷b转锟斤拷锟斤拷list
             List<String> bList = new ArrayList<>();
             Collections.addAll(bList, b);
-            // 循环a数组
+            // 循锟斤拷a锟斤拷锟斤拷
             for (String aValue : a) {
-                // 判断b中是否包含元素aValue,包含则增加为a和b的共元素
+                // 锟叫讹拷b锟斤拷锟角凤拷锟斤拷锟皆拷锟絘Value,锟斤拷锟斤拷锟斤拷锟斤拷锟斤拷为a锟斤拷b锟侥癸拷元锟斤拷
                 if (!bList.contains(aValue)) {
                     commonList.add(aValue);
                 }
             }
         }else{
             System.out.println("SDf");
-            // 数组b转换的list
             List<String> bList = new ArrayList<>();
             Collections.addAll(bList, a);
-            // 循环a数组
             for (String aValue : b) {
-                // 判断b中是否包含元素aValue,包含则增加为a和b的共元素
                 if (!bList.contains(aValue)) {
                     commonList.add(aValue);
                 }
             }
         }
-        // 打印commonList
         System.out.println(commonList.toString());
     }
 

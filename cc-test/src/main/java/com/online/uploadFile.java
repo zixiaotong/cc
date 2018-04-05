@@ -14,12 +14,6 @@ import com.jcraft.jsch.Session;
  */
 public class uploadFile {
 
-    /**
-     * 上传文件 OK
-     *
-     * @param args
-     * @throws Exception
-     */
     public static void main(String[] args) throws Exception {
         Session session = null;
         Channel channel = null;ChannelSftp sftp =null;

@@ -197,6 +197,11 @@ public class StringTest {
         int a = 1;
         System.out.println(a==1?"OK":"NO");
     }
+    @Test
+    public void test19(){
+        int a = Math.max(1,Math.min(128,1280));
+        System.out.println(a);
+    }
 
 }
 

@@ -27,7 +27,8 @@ public class ChannelShellDemo {
         String userName = "root";
         String password = "zhtx1.q";
 
-        String[] cmds = new String[] {"ifconfig\n","ssh -p 8802 root@192.168.102.147 #p\n","/usr/local/nginx/sbin/nginx -t\n"};
+        String[] cmds = new String[] {"ifconfig\n", "ssh -p 8802 root@192.168.102.147 #p\n",
+            "/usr/local/nginx/sbin/nginx -t\n"};
         String[] result = null;
         try {
             result = execShellCmdBySSH(ip, port, localIp, localPort, timeOut, userName, password, cmds);
@@ -43,19 +44,6 @@ public class ChannelShellDemo {
 
     }
 
-    /**
-     * ????Session??????Session????
-     *
-     * @param dstIp
-     * @param dstPort
-     * @param localIp
-     * @param localPort
-     * @param userName
-     * @param password
-     * @param timeOut
-     * @return
-     * @throws JSchException
-     */
     public static Session createSession(String dstIp, int dstPort,
                                         final String localIp, final int localPort, String userName,
                                         String password, final int timeOut) throws JSchException {
@@ -70,20 +58,6 @@ public class ChannelShellDemo {
         return session;
     }
 
-    /**
-     * ???SSH§¿?ï…?????Linux Shell????§ß??????????????
-     *
-     * @param dstIp
-     * @param dstport   default :22
-     * @param localIp
-     * @param localPort
-     * @param timeOut
-     * @param userName
-     * @param password
-     * @param cmds
-     * @return
-     * @throws Exception
-     */
     public static String[] execShellCmdBySSH(String dstIp, int dstport,
                                              String localIp, int localPort, int timeOut, String userName,
                                              String password, String... cmds) throws Exception {
@@ -104,7 +78,7 @@ public class ChannelShellDemo {
                 result[i] = sendCommand(is, os, cmds[i]);
             }
             Thread.sleep(10000);
-            System.out.println("status1:"+channel.getExitStatus());
+            System.out.println("status1:" + channel.getExitStatus());
             return result;
         } catch (JSchException e) {
             if (e.getMessage().contains("Auth fail")) {
@@ -124,21 +98,12 @@ public class ChannelShellDemo {
             } catch (IOException e) {
             }
             Thread.sleep(10000);
-            System.out.println("status2:"+channel.getExitStatus());
+            System.out.println("status2:" + channel.getExitStatus());
             channel.disconnect();
             session.disconnect();
         }
     }
 
-    /**
-     * ???Shell???????????§ß??
-     *
-     * @param is
-     * @param os
-     * @param cmd
-     * @return
-     * @throws IOException
-     */
     private static String sendCommand(InputStream is, OutputStream os,
                                       String cmd) throws IOException {
         os.write(cmd.getBytes());
