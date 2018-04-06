@@ -13,49 +13,39 @@ import org.apache.hadoop.mapreduce.Reducer;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 
-/**
- * @author shanglei
- * @date 2018/4/5 15:55
- */
-public class FlowSummary {
-
-    public static class FlowSummaryMapper extends Mapper<LongWritable, Text, Text, FlowBean> {
+public class FlowSummarySort {
+    public static class FlowSummarySortMapper extends Mapper<LongWritable, Text, FlowBean, Text> {
         @Override
         protected void map(LongWritable key, Text value, Context context)
             throws IOException, InterruptedException {
-            String line = value.toString();
-            String[] fields = StringUtils.split(line, "\t");
-            String phoneStr = fields[1];
-            long up_flow = Long.parseLong(fields[fields.length - 3]);
-            long d_flow = Long.parseLong(fields[fields.length - 2]);
+            String s = value.toString();
+            String[] fields = StringUtils.split(s, "\t");
+            String phoneStr = fields[0];
+            long up_flow = Long.parseLong(fields[1]);
+            long d_flow = Long.parseLong(fields[2]);
             FlowBean flowBean = new FlowBean();
             flowBean.set(up_flow, d_flow);
-            context.write(new Text(phoneStr), flowBean);
+            context.write(flowBean, new Text(phoneStr));
         }
     }
 
-    public static class FlowSummaryReducer extends Reducer<Text, FlowBean, Text, FlowBean> {
+    public static class FlowSummarySortReducer extends Reducer<FlowBean, Text, Text, FlowBean> {
         @Override
-        protected void reduce(Text key, Iterable<FlowBean> values, Context context)
+        protected void reduce(FlowBean bean, Iterable<Text> phoneStr, Context context)
             throws IOException, InterruptedException {
-            long up_sum = 0;
-            long d_sum = 0;
-            for (FlowBean flowBean : values) {
-                d_sum += flowBean.getD_flow();
-                up_sum += flowBean.getUp_flow();
+            for (Text text : phoneStr) {
+                context.write(text, bean);
             }
-            FlowBean flowBean = new FlowBean();
-            flowBean.set(up_sum, d_sum);
-            context.write(key, flowBean);
         }
     }
 
     public static void main(String[] args) throws Exception {
         Configuration configuration = new Configuration();
         Job job = Job.getInstance(configuration);
-        job.setJarByClass(FlowSummary.class);
-        job.setMapperClass(FlowSummaryMapper.class);
-        job.setReducerClass(FlowSummaryReducer.class);
+        job.setJarByClass(FlowSummarySort.class);
+        job.setMapperClass(FlowSummarySortMapper.class);
+        job.setReducerClass(FlowSummarySortReducer.class);
+        // 此处一定要分清楚输入和输出
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
         FileInputFormat.setInputPaths(job, new Path(args[0]));
