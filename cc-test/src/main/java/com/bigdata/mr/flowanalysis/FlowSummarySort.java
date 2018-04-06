@@ -42,14 +42,22 @@ public class FlowSummarySort {
     public static void main(String[] args) throws Exception {
         Configuration configuration = new Configuration();
         Job job = Job.getInstance(configuration);
+
         job.setJarByClass(FlowSummarySort.class);
+
         job.setMapperClass(FlowSummarySortMapper.class);
         job.setReducerClass(FlowSummarySortReducer.class);
+
+        job.setMapOutputKeyClass(FlowBean.class);
+        job.setMapOutputValueClass(Text.class);
+
         // 此处一定要分清楚输入和输出
         job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(FlowBean.class);
+
         FileInputFormat.setInputPaths(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
+
         int result = job.waitForCompletion(true) ? 0 : 1;
         System.exit(result);
     }
