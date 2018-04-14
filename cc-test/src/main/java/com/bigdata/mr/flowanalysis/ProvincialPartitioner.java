@@ -11,7 +11,7 @@ import org.apache.hadoop.mapreduce.Partitioner;
  */
 public class ProvincialPartitioner extends Partitioner<Text, FlowBean> {
 
-    private static HashMap<String, Integer> provinceMap = new HashMap<String, Integer>();
+    private static HashMap<String, Integer> provinceMap = new HashMap<>();
     static {
         provinceMap.put("136", 0);
         provinceMap.put("137", 1);
