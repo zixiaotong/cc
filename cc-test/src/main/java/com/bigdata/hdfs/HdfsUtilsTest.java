@@ -27,8 +27,8 @@ public class HdfsUtilsTest {
     @Before
     public void init() throws Exception {
         Configuration conf = new Configuration();
-        conf.set("fs.defaultFS", "hdfs://master:9000");
-        fs = FileSystem.get(new URI("hdfs://master:9000"), conf, "root");
+        conf.set("fs.defaultFS", "hdfs://ns1");
+        fs = FileSystem.get(new URI("hdfs://ns1"), conf, "root");
     }
 
     /**
@@ -36,8 +36,8 @@ public class HdfsUtilsTest {
      */
     @Test
     public void testUpload() throws IOException {
-        fs.copyFromLocalFile(new Path("/Users/shanglei/Downloads/nginx_164.tar.gz"),
-            new Path("/nginx_164.tar.gz"));
+        fs.copyFromLocalFile(new Path("/Users/shanglei/Downloads/wordcount/data/hello.txt"),
+            new Path("hdfs://ns1/hello.txt2"));
     }
 
     /**
