@@ -236,5 +236,11 @@ public class StringTest {
         return result;
     }
 
+    @Test
+    public void test21() {
+        String str = "123456789";
+        System.out.println(str.substring(0,6));
+    }
+
 }
 
