@@ -4,6 +4,10 @@ import java.util.HashMap;
 
 import org.apache.hadoop.hive.ql.exec.UDF;
 
+/**
+ * @author shanglei
+ * @date 2018/4/21 16:38
+ */
 public class AreaTransfer extends UDF {
 
     private static HashMap<String, String> areaMap = new HashMap<>();
