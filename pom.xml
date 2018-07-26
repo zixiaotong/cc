@@ -11,7 +11,7 @@
     <modules>
         <module>cc-web</module>
         <module>cc-service</module>
-        <module>cc-test</module>
+        <!--<module>cc-test</module>-->
         <module>cc-entity</module>
         <module>cc-contact</module>
     </modules>
@@ -163,97 +163,10 @@
             <version>1.16.8</version>
         </dependency>
 
-        <!--hadoop运行jar包 start-->
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-hdfs</artifactId>
-            <version>2.8.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-common</artifactId>
-            <version>2.8.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-mapreduce-client-core</artifactId>
-            <version>2.8.2</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hadoop</groupId>
-            <artifactId>hadoop-mapreduce-client-jobclient</artifactId>
-            <version>2.8.2</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase</artifactId>
-            <version>1.4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-client</artifactId>
-            <version>1.4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-hadoop2-compat</artifactId>
-            <version>1.4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hbase</groupId>
-            <artifactId>hbase-server</artifactId>
-            <version>1.4.3</version>
-        </dependency>
-        <dependency>
-            <groupId>org.apache.hive</groupId>
-            <artifactId>hive-exec</artifactId>
-            <version>1.2.2</version>
-        </dependency>
-
-
-
-
-
-        <!--hadoop运行jar包 end-->
-
     </dependencies>
 
     <!--发布环境针对配置-->
     <profiles>
-        <!--<profile>-->
-            <!--<id>online</id>-->
-            <!--<properties>-->
-                <!--<dubbox.register>true</dubbox.register>-->
-                <!--<dubbox.timeout>3000</dubbox.timeout>-->
-                <!--<dubbox.version>1.0.0</dubbox.version>-->
-                <!--<war.skipjspath></war.skipjspath>-->
-                <!--<log4j.level>WARN</log4j.level>-->
-                <!--<disconf.conf_server_host>disconf.zhanghetianxia.com</disconf.conf_server_host>-->
-                <!--<disconf.version>1_0_0_0</disconf.version>-->
-                <!--<disconf.env>online</disconf.env>-->
-                <!--<disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>-->
-                <!--<disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>-->
-            <!--</properties>-->
-        <!--</profile>-->
-        <!--<profile>-->
-            <!--<id>local</id>-->
-            <!--<properties>-->
-                <!--<dubbox.register>false</dubbox.register>-->
-                <!--<dubbox.timeout>3000</dubbox.timeout>-->
-                <!--<dubbox.version>1.0.0</dubbox.version>-->
-                <!--<war.skipjspath></war.skipjspath>-->
-                <!--<log4j.level>DEBUG</log4j.level>-->
-                <!--<disconf.conf_server_host>disconf.zhtxw.com.online.cn</disconf.conf_server_host>-->
-                <!--<disconf.version>1_0_0_0</disconf.version>-->
-                <!--<disconf.env>local</disconf.env>-->
-                <!--<disconf.conf_server_url_retry_times>3</disconf.conf_server_url_retry_times>-->
-                <!--<disconf.conf_server_url_retry_sleep_seconds>3</disconf.conf_server_url_retry_sleep_seconds>-->
-            <!--</properties>-->
-            <!--<activation>-->
-                <!--<activeByDefault>true</activeByDefault>-->
-            <!--</activation>-->
-        <!--</profile>-->
 
     </profiles>
 
