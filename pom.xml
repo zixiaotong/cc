@@ -11,7 +11,7 @@
     <modules>
         <module>cc-web</module>
         <module>cc-service</module>
-        <!--<module>cc-test</module>-->
+        <module>cc-test</module>
         <module>cc-entity</module>
         <module>cc-contact</module>
     </modules>
