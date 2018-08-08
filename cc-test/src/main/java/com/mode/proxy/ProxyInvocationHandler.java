@@ -5,29 +5,29 @@ import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**
- * Created by shanglei on 2017/6/6.
+ *
+ * @author shanglei
+ * @date 2017/6/6
  */
 public class ProxyInvocationHandler implements InvocationHandler {
 
-    private User user;
+    private IUser IUser;
 
-    private ProxyInvocationHandler(User user) {
-        this.user = user;
+    private ProxyInvocationHandler(IUser IUser) {
+        this.IUser = IUser;
     }
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("ddd");
-        return method.invoke(user, args);
+        System.out.println("被调用之前做些事情");
+        return method.invoke(IUser, args);
     }
 
     public static void main(String[] args) {
-        User userImpl = new UserImpl();
-        User user1 = (User) Proxy.newProxyInstance(userImpl.getClass().getClassLoader(),userImpl.getClass().getInterfaces(),
-            new ProxyInvocationHandler(userImpl));
-
-        user1.getUser();
-        user1.getName();
-
+        IUser IUserImpl = new IUserImpl();
+        IUser IUser1 = (IUser) Proxy.newProxyInstance(IUserImpl.getClass().getClassLoader(), IUserImpl.getClass().getInterfaces(),
+            new ProxyInvocationHandler(IUserImpl));
+        IUser1.getUser();
+        IUser1.getName();
     }
 }

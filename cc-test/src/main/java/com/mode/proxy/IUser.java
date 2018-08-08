@@ -1,9 +1,11 @@
 package com.mode.proxy;
 
 /**
- * Created by shanglei on 2017/6/6.
+ *
+ * @author shanglei
+ * @date 2017/6/6
  */
-public interface User {
+public interface IUser {
 
     void getUser();
 

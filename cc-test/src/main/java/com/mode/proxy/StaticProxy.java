@@ -1,31 +1,35 @@
 package com.mode.proxy;
 
 /**
- * Created by shanglei on 2017/6/6.
+ * @author shanglei
+ * @date 2017/6/6
  */
-public class StaticProxy implements User {
+public class StaticProxy implements IUser {
 
-    private User user;
+    private IUser IUser;
 
-    private StaticProxy(User user) {
-        this.user = user;
+    private StaticProxy(IUser IUser) {
+        this.IUser = IUser;
     }
 
     @Override
     public void getUser() {
-        System.out.println("user1");
-        user.getUser();
+        System.out.println("StaticProxyUser\r\n");
+        IUser.getUser();
     }
 
     @Override
     public void getName() {
-        System.out.println("name1");
-        user.getName();
+        System.out.println("StaticProxyName");
+        IUser.getName();
     }
 
     public static void main(String[] args) {
-        User user = new UserImpl();
-        User staticProxy = new StaticProxy(user);
+        IUser IUser = new IUserImpl();
+        IUser.getName();
+        IUser.getUser();
+
+        IUser staticProxy = new StaticProxy(IUser);
         staticProxy.getUser();
         staticProxy.getName();
     }

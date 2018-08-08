@@ -171,7 +171,7 @@ public class stream {
         List<Integer> disShopList = after.stream().filter(m -> m.getId() > 0).map(k -> k.getId()).distinct().collect(
             Collectors.toList());
 
-        //List<User> before1 = before.stream().filter((User k) ->k.setAge(1)).collect(Collectors.toList().);
+        //List<IUser> before1 = before.stream().filter((IUser k) ->k.setAge(1)).collect(Collectors.toList().);
 
 
         //after = after.stream().map(student -> new Demo(student.getAge(), student.getSex())).collect(Collectors.toList());
