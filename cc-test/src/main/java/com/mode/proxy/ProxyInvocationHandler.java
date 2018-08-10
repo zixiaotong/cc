@@ -25,7 +25,9 @@ public class ProxyInvocationHandler implements InvocationHandler {
 
     public static void main(String[] args) {
         IUser IUserImpl = new IUserImpl();
-        IUser IUser1 = (IUser) Proxy.newProxyInstance(IUserImpl.getClass().getClassLoader(), IUserImpl.getClass().getInterfaces(),
+        IUser IUser1 = (IUser) Proxy.newProxyInstance(
+            IUserImpl.getClass().getClassLoader(),
+            IUserImpl.getClass().getInterfaces(),
             new ProxyInvocationHandler(IUserImpl));
         IUser1.getUser();
         IUser1.getName();
