@@ -1,9 +1,11 @@
 package com.mode.decorator;
 
 /**
- * Created by shanglei on 2017/6/12.
+ *
+ * @author shanglei
+ * @date 2017/6/12
  */
-public abstract class Decorator implements Component {
+public class Decorator implements Component {
 
     private Component component;
 

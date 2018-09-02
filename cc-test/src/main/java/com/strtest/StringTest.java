@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.Random;
 
 import org.apache.commons.lang.StringUtils;
@@ -238,6 +239,10 @@ public class StringTest {
 
     @Test
     public void test21() {
+        ArrayList<String> arrayList = new ArrayList<>();
+        HashMap<String,String> hashMap = new HashMap<>();
+
+        System.out.println("SDfdsf");
         String str = "123456789";
         System.out.println(str.substring(0,6));
     }

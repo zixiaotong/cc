@@ -38,13 +38,13 @@ public class Task {
                 try {
                     selectCount.await(10, TimeUnit.MINUTES);
                     if (queue.size() == 0) {
-                        System.out.println(Thread.currentThread().getId() + "����Ϊ��");
+                        System.out.println(Thread.currentThread().getId() + "???????");
                         Thread.sleep(10);
                         continue;
                     }
                     OrderTest data = queue.poll();
                     if (null == data) {
-                        System.out.println(Thread.currentThread().getId() + "���ݱ������̻߳�ȡ");
+                        System.out.println(Thread.currentThread().getId() + "??????????????");
                         Thread.sleep(10);
                         continue;
                     }
