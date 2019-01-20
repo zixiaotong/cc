@@ -25,4 +25,29 @@ public class time {
         }
 
     }
+
+
+    @Test
+    public void test2() throws Exception {
+        Date a = new Date(new Date().getTime()-2*60*1000);
+        System.out.println(judgmentDate(new Date(),a));
+    }
+    /**
+     * 判断是否超过30分钟
+     * @return boolean
+     * @throws Exception
+     */
+    public static boolean judgmentDate(Date now, Date payDate) throws Exception {
+        long cha = now.getTime() - payDate.getTime();
+        if (cha < 0) {
+            return false;
+        }
+        double result = cha * 1.0 / (1000 * 60);
+        if (result < 30) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
 }
