@@ -21,10 +21,17 @@ public class TestMain {
     private static String url7 = "https://meican.com/preorder/api/v2.1/orders/show";
     private static String url8 = "https://meican.com/preorder/api/v2.1/corpaddresses/getmulticorpaddress?namespace=416046";
 
-    public static void main(String[] args) {
-        String s = SendHttp.sendPost(url, "");
-        System.out.println(s);
+    private static String url9 = "https://meican.com/preorder/api/v2.1/recommendations/dishes";
 
+    public static void main(String[] args) {
+//        String s = SendHttp.sendPost(url, "");
+//        System.out.println(s);
+
+//param = "CorpID=" + CorpID + "&LoginName=" + LoginName
+        System.out.println(SendHttp.sendPost(url9,
+                "tabUniqueId=dee31017-9592-4c80-900d-c162eed0a31d&targetTime=2019-01-28%2011%3A00"));
+//                "tabUniqueId=" + "dee31017-9592-4c80-900d-c162eed0a31d" + "&targetTime=" + "2019-01-28 11:00"));
+//                "tabUniqueId:dee31017-9592-4c80-900d-c162eed0a31d;targetTime:2019-01-28 11:00"));
 
 
 //        String s1 = SendHttp.sendGet(url5, "");

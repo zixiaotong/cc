@@ -3,6 +3,7 @@ package com.strtest;
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -10,6 +11,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import org.apache.commons.lang.StringUtils;
 import org.apache.commons.lang.time.DateUtils;
@@ -245,6 +248,48 @@ public class StringTest {
         System.out.println("SDfdsf");
         String str = "123456789";
         System.out.println(str.substring(0,6));
+    }
+    @Test
+    public void test22() {
+
+        String str = "1";
+        Integer b = 1;
+        System.out.println(str.equals(String.valueOf(b.intValue())));
+    }
+    @Test
+    public void test23(){
+        Pattern pattern=Pattern.compile("^(([1-9]{1}\\d*)|([0]{1}))(\\.(\\d){0,2})?$"); // 判断小数点后2位的数字的正则表达式
+        Matcher match=pattern.matcher("45353gfhfd");
+        if(match.matches()==false){
+            System.out.println(false);
+        }else{
+            System.out.println(true);
+        }
+    }
+    private static Pattern NUMBER_PATTERN = Pattern.compile("^-?[1-9]\\d*$");
+    @Test
+    public void test24(){
+
+        boolean v = NUMBER_PATTERN.matcher("123.54").find();
+        System.out.println(v);
+
+
+    }
+    public Pattern getNumberPattern() {
+        // Avoid use Pattern.compile in method body.
+        Pattern localPattern = Pattern.compile("[0-9]+");
+        return localPattern;
+    }
+
+    @Test
+    public void test25() throws ParseException {
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        Long startDate = sdf.parse("2019-03-25 00:00:00").getTime();
+        Long endDate = sdf.parse("2019-04-03 10:00:00").getTime();
+        Long nowTime = System.currentTimeMillis();
+        if ((nowTime >= startDate && nowTime <= endDate)) {
+            System.out.println("SDfsd");
+        }
     }
 
 }
