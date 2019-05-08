@@ -1,6 +1,7 @@
 package com.time;
 
 import java.math.BigDecimal;
+import java.text.NumberFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.*;
@@ -10,8 +11,13 @@ import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
 import java.util.*;
 
+import com.utils.DateUtil;
+import com.utils.TimeUtil;
 import org.joda.time.DateTime;
 import org.junit.Test;
+
+import static com.utils.DateUtil.formatDateToDate;
+import static com.utils.DateUtil.getStartDateFarmat;
 
 /**
  * @author shanglei
@@ -288,12 +294,52 @@ public class time {
 
     @Test
     public void test13() {
-        System.out.println(deciMal(2, 15));
+//        System.out.println(deciMal(2, 15));
+        Double rate = 0.038;
+        NumberFormat num = NumberFormat.getPercentInstance();
+        String rates = num.format(rate);
+        System.out.println(rates);
     }
 
     private double deciMal(int top, int below) {
         double result = new BigDecimal((float) top / below).setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
         return result;
     }
+
+    @Test
+    public void test14() throws ParseException {
+        String str1 = "2018-04";
+        String str2 = "2018-09";
+        Set<String> set = new TreeSet<>();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM");
+        Calendar bef = Calendar.getInstance();
+        Calendar aft = Calendar.getInstance();
+        bef.setTime(sdf.parse(str1));
+        aft.setTime(sdf.parse(str2));
+        int month = aft.get(Calendar.MONTH) - bef.get(Calendar.MONTH);
+        int year = (aft.get(Calendar.YEAR) - bef.get(Calendar.YEAR)) * 12;
+        int diff = Math.abs(year + month);
+        String[] s = str1.split("-");
+        int year11 = Integer.valueOf(s[0]);
+        int month11 = Integer.valueOf(s[1]);
+        set.add(str1);
+        for (int i = 0; i < diff; i++) {
+            month11 += 1;
+            if (month11 > 12) {
+                year11 += 1;
+                month11 = 1;
+                set.add(year11 + "-" + month11);
+            } else {
+                set.add(year11 + "-" + month11);
+            }
+        }
+        Set<String> set1 = new TreeSet<>();
+        for (String date : set) {
+            String str = sdf.format(TimeUtil.parseDateTime(date, TimeUtil.YEAR_MONTH));
+            set1.add(str);
+        }
+        System.out.println(set1);
+    }
+
 
 }
