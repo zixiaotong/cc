@@ -45,4 +45,28 @@ public class avgSplitArray {
         }
         return result;
     }
+
+    public static List<List<Integer>> split2(List<Integer> origin, int num) {
+        List<List<Integer>> result = new ArrayList<>();
+        int length = origin.size();
+        int index = 0;
+        for (int i = num; i > 0; i--) {
+            if (length == 0) {
+                result.add(new ArrayList<Integer>());
+                continue;
+            }
+            int tmp = length / i;
+            if (length % i != 0) {
+                tmp++;
+            }
+            result.add(origin.subList(index, index + tmp));
+            index += tmp;
+            length -= tmp;
+        }
+
+        return result;
+    }
+    public void ssss(){
+        System.out.println("DFd");
+    }
 }
