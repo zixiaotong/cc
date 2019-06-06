@@ -11,6 +11,7 @@ import java.time.temporal.TemporalField;
 import java.time.temporal.WeekFields;
 import java.util.*;
 
+import com.google.common.collect.Lists;
 import com.utils.DateUtil;
 import com.utils.TimeUtil;
 import org.joda.time.DateTime;
@@ -339,6 +340,46 @@ public class time {
             set1.add(str);
         }
         System.out.println(set1);
+    }
+
+    @Test
+    public void test15() throws ParseException {
+//        double a = 0.44;
+//        double b = 0.54;
+//        System.out.println(a>b);
+//        System.out.println(a<b);
+//        System.out.println(a==b);
+
+        Double a = 14.77;
+        Double b = 14.77;
+        int retval = a.compareTo(b);
+        if (retval > 0) {
+            System.out.println("a>b");
+        } else if (retval < 0) {
+            System.out.println("a<b");
+        } else {
+            System.out.println("a=b");
+        }
+    }
+
+    @Test
+    public void test16(){
+        String s="1.因为五四运动是一次反帝反封建的爱国运动，它具有广泛的群众基础并取得了初步胜利；运动中工人阶级第一次登上历史舞台；它揭开了中国新民主主义革命的序幕。\n" +
+                "2.这场运动孕育的爱国、进步、民主、科学的五四精神，成为中国人民和中国青年在党的领导下为中华民族伟大复兴而不懈奋斗的宝贵精神财富。五四精神的核心，是伟大的爱国主义。\n" +
+                "3.它是辛亥革命在思想文化领域的延续；它启发了人们的理智和民主主义觉悟，将人们从封建专制所造成的蒙昧中解放出来，开启了思想解放的潮流；它为中国先进分子接受马克思主义准备了适宜的土壤，为以五四运动为开端的中国新民主主义革命创造了思想文化上的条件。\n" +
+                "4.五四运动体现的爱国主义精神，是中华民族百折不挠、自强不息的民族精神的生动写照，是我国几千年来发展和进步的重要力量源泉。\n" +
+                "5.五四运动也是新文化运动的继续和发展。1915年陈独秀创办《青年杂志》，次年改称《新青年》，举起“民主”和“科学”两面旗帜，猛烈抨击封建主义旧文化，提倡新文化。随后，还提倡白话文代替文言文，并在“文学革命”的口号下，提倡新文学。1917年俄国十月社会主义革命的胜利，在中国人民中产生了巨大的影响。中国的先进分子开始用无产阶级的宇宙观作为观察国家命运的工具。1918年11月李大钊发表的《庶民的胜利》、《布尔什维主义的胜利》等文，代表了中国先进分子的新觉醒。";
+
+        System.out.println(s.length());
+    }
+
+
+    @Test
+    public void test17(){
+        List<Long> mansong = Lists.newArrayList(298L,275L,170L,188L,76L,294L,281L,324L,393L,90L,329L,258L,242L,232L,360L,214L,261L,213L,204L,234L,224L,184L,162L);
+        if(mansong.contains(188L)){
+            System.out.println("包含");
+        }
     }
 
 
